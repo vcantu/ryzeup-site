@@ -1,38 +1,51 @@
 <ru-navbar></ru-navbar>
 
-<md-tabs md-align-tabs="top" md-border-bottom
-         layout-fill>
 
-    <md-tab>
-        <md-tab-label>
-            <i class="mdi mdi-fire tab-fire"></i>posts
-        </md-tab-label>
-        <md-content class="md-padding"
-                    flex-gt-sm="70"
-                    flex-offset-gt-sm="15">
-            <md-list>
-                <md-list-item ng-repeat="post in model.posts track by $index">
-                    <post-item post="post"
-                               flex="100"></post-item>
-                </md-list-item>
-            </md-list>
-        </md-content>
-    </md-tab>
+<md-nav-bar
+        nav-bar-aria-label="navigation links">
+    <md-nav-item md-nav-click="goto('page1')" name="page1">
+        Page One
+    </md-nav-item>
+    <md-nav-item md-nav-click="goto('page2')" name="page2">
+        Page Two
+    </md-nav-item>
+    <md-nav-item md-nav-click="goto('page3')" name="page3">
+        Page Three
+    </md-nav-item>
+</md-nav-bar>
+<!--<md-tabs md-align-tabs="top" md-border-bottom-->
+         <!--layout-fill>-->
 
-    <md-tab label="bills">
-        <md-content class="md-padding"
-                    flex-gt-sm="70" flex-offset-gt-sm="15">
-            <h2><i class="mdi mdi-book-open-variant mdi-48px"></i> Latest Bills</h2>
-            <md-list>
-                <md-list-item ng-repeat="bill in model.bills | limitTo:25">
-                    <bill-item bill="bill"
-                               flex="100"></bill-item>
-                </md-list-item>
-            </md-list>
-        </md-content>
-    </md-tab>
+    <!--<md-tab>-->
+        <!--<md-tab-label>-->
+            <!--<i class="mdi mdi-fire tab-fire"></i>posts-->
+        <!--</md-tab-label>-->
+        <!--<md-content class="md-padding"-->
+                    <!--flex-gt-sm="70"-->
+                    <!--flex-offset-gt-sm="15">-->
+            <!--<md-list>-->
+                <!--<md-list-item ng-repeat="post in model.posts track by $index">-->
+                    <!--<post-item post="post"-->
+                               <!--flex="100"></post-item>-->
+                <!--</md-list-item>-->
+            <!--</md-list>-->
+        <!--</md-content>-->
+    <!--</md-tab>-->
 
-</md-tabs>
+    <!--<md-tab label="bills">-->
+        <!--<md-content class="md-padding"-->
+                    <!--flex-gt-sm="70" flex-offset-gt-sm="15">-->
+            <!--<h2><i class="mdi mdi-book-open-variant mdi-48px"></i> Latest Bills</h2>-->
+            <!--<md-list>-->
+                <!--<md-list-item ng-repeat="bill in model.bills | limitTo:25">-->
+                    <!--<bill-item bill="bill"-->
+                               <!--flex="100"></bill-item>-->
+                <!--</md-list-item>-->
+            <!--</md-list>-->
+        <!--</md-content>-->
+    <!--</md-tab>-->
+
+<!--</md-tabs>-->
 
 
 <md-button ng-if="model.loggedIn !== null || model.loggedIn !== undefined"

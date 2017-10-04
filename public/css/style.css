@@ -23,21 +23,6 @@
     min-width: 10px;
 }
 
-/*.D:hover {*/
-    /*background: #BBDEFB;*/
-    /*opacity: 0.85;*/
-/*}*/
-
-/*.R:hover {*/
-    /*background: #FFCDD2;*/
-    /*opacity: 0.85;*/
-/*}*/
-
-/*.I:hover {*/
-    /*background: #ffffa8;*/
-    /*opacity: 0.85;*/
-/*}*/
-
 md-card md-card-title {
     padding-top: 5px;
 }
@@ -57,23 +42,37 @@ md-card md-card-header md-card-avatar .md-user-avatar {
 }
 
 .profile-avatar {
-    height: 40px;
+    height: 32px;
+    width: 32px;
     border-radius: 50%;
-}
-
-.profile-image {
-    height: 40px;
-    width: 40px;
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-bottom: 2px;
 }
 
 .navbar-fixed-top {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    height: 48px;
 }
 
-navbar-raised {
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+.md-toolbar-tools .md-button {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+/*.navbar-raised {*/
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.4);*/
+/*}*/
+
+md-nav-bar.md-default-theme .md-nav-bar, md-nav-bar .md-nav-bar {
+    background-color: #F5F5F5;
+}
+
+.navbar-logo {
+    height: 28px;
+    margin-left: 10px;
 }
 
 #vertical-container {
@@ -132,19 +131,12 @@ navbar-raised {
     opacity: 0.85;
 }
 
-.profile-image {
-    padding-right: 10px;
-}
-
 /* makes tabs header F5 gray */
-md-tabs.md-default-theme md-tabs-wrapper, md-tabs md-tabs-wrapper {
-    background: #F5F5F5;
-}
+/*md-tabs.md-default-theme md-tabs-wrapper, md-tabs md-tabs-wrapper {*/
+    /*background: #F5F5F5;*/
+/*}*/
 
-.navbar-logo {
-    height: 36px;
-    margin-left: 10px;
-}
+
 
 .form-input {
     margin-top: 6px;

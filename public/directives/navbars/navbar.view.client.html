@@ -1,4 +1,4 @@
-<md-toolbar class="navbar-fixed-top"
+<md-toolbar class="navbar-fixed-top navbar-raised"
             md-theme="grey-theme"
             ng-controller="navbarController as ctrl">
     <div class="md-toolbar-tools">
@@ -18,22 +18,28 @@
             </img>
         </h2>
 
-        <p style="font-weight: 200; margin-right: 10px">
-            {{ctrl.user.firstName.toUpperCase()}}
-        </p>
 
-        <div class="profile-image" ng-click="ctrl.profileClick()"
-             ng-show="ctrl.user">
-            <md-tooltip>Profile</md-tooltip>
+
+        <md-button ng-click="ctrl.profileClick()"
+                   ng-show="ctrl.user"
+                   style="font-weight: 200;">
+            {{ctrl.user.firstName.toUpperCase()}}
             <img class="profile-avatar"
                  src="{{ctrl.userImgUrl}}">
-        </div>
+            <md-tooltip>Profile</md-tooltip>
+        </md-button>
 
         <md-button class="mdi-icon-button" aria-label="Administer"
                    ng-show="ctrl.isAdmin"
                    ng-click="ctrl.goToAdmin()">
             <md-tooltip>Administer</md-tooltip>
             <i class="mdi mdi-shield-half-full mdi-24px"></i>
+        </md-button>
+
+        <md-button class="mdi-icon-button" aria-label="Alerts"
+                   ng-click="ctrl.goToMembers()">
+            <md-tooltip>Alerts</md-tooltip>
+            <i class="mdi mdi-bell mdi-24px"></i>
         </md-button>
 
         <md-button class="mdi-icon-button" aria-label="Members"
@@ -52,16 +58,17 @@
                    ng-show="ctrl.user"
                    ng-click="ctrl.logoutClick()">
             <md-tooltip>Logout</md-tooltip>
-            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+            <i class="mdi mdi-chevron-down mdi-24px"></i>
         </md-button>
 
-        <md-button class="mdi-icon-button" aria-label="Login"
+        <md-button class="md-raised md-accent" aria-label="Login"
                    ng-show="!ctrl.user"
-                   ng-click="ctrl.goToLogin()">
-            <md-tooltip>Login</md-tooltip>
-            <i class="mdi mdi-login mdi-24px"></i>
+                   ng-click="ctrl.goToLogin()"
+                   style="padding-left: 13px;
+                   padding-right: 12px; margin-left: 8px; margin-right: 4px;">
+            LOGIN
         </md-button>
 
     </div>
 </md-toolbar>
-<div class="ru-navbar" style="margin-top: 56px;"></div>
+<div style="margin-top: 48px;"></div>
